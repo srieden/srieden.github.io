@@ -45,7 +45,7 @@ h1 {
 }
 
 #invitation > .frame .frame-corner {
-  border: 10px solid;
+  border: 6px solid;
   border-image: url('/images/corner.svg') 33% round;
   border-image-width: 7;
 }
@@ -63,8 +63,8 @@ h1 {
   padding-bottom: 20px;
 }
 #invitation .content-undangan .image{
-  width: 80%;
-  max-width: 300px;
+  width: 100%;
+  max-width: 320px;
 }
 
 #invitation .content-we .image {

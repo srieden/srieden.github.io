@@ -9,28 +9,26 @@
     <link rel="stylesheet" href="/material-icon.css">
     <link rel="stylesheet" href="/style.css">
     <title>Undangan Pernikahan Sri Haryati dan Deden Maulana</title>
+    <meta property="og:url"           content="/invitation.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Undangan" />
+    <meta property="og:description"   content="Pernikahan Sri Haryati dan Deden Maulan" />
+    <meta property="og:image"         content="/logo.png" />
 </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">
-                    <i class="material-icons">home</i> Sri & Deden
-                </a>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <button class="visible-xs pull-right btn btn-default navbar-btn" style="margin-right:5px"><i class="material-icons">send</i> Facebook</button>
+                <a class="navbar-brand" href="/">Sri & Deden</a>
+                <!-- Your share button code -->
+                <div class="visible-xs pull-right fb-share-button btn btn-default navbar-btn" data-href="/" data-size="large"></div>
+                <button class="visible-xs pull-right btn btn-default navbar-btn" style="margin-right:10px"><i class="material-icons">pin_drop</i></button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a><i class="material-icons">person</i> <span class="to">Tamu Undangan</span></a></li>
                     <li><a href="https://bit.ly/srieden"><i class="material-icons">pin_drop</i> Lihat Lokasi</a></li>
                 </ul>
-                <button class="hidden-xs pull-right btn btn-default navbar-btn"><i class="material-icons">send</i> Facebook</button>
+                <div class="hidden-xs pull-right fb-share-button btn btn-default navbar-btn" data-href="/" data-size="large"></div>
             </div>
         </div>
     </nav>
@@ -102,53 +100,23 @@
             </div>
         </div>
     </div>
+    <div id="fb-root"></div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="/app.js"></script>
     <script>
-        $(document).ready(function () {
-            let name = getName()
-            changeName(name)
+        function createButton (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        };
 
-            $.getJSON('/data.json').then(function(response) {
-                if (response[name]) {
-                    setImage(name, response[name])
-                }
-            })
-
-            
-            setTimeout(() => {
-                setHeight()
-            }, 100);
-
-            $("#card").flip().on('flip:done', setHeight)
-        })
-
-        function setHeight () {
-            var inHeight = $('#invitation').height() - 30;
-            $('#photo .frame-inner, #photo img').css({'height': inHeight});
-        }
-
-        function changeName (name) {
-            $('.to').html(name)
-        }
-
-        function setImage (name, src) {
-            let image = '<img src="' + src + '" alt="' + name + '">';
-            $('#imagehere').replaceWith(image)
-        }
-
-        function getName () {
-            var queries = {};
-            $.each(document.location.search.substr(1).split('&'),function(c,q){
-                if (q) {
-                    var i = q.split('=');
-                    queries[i[0].toString()] = decodeURIComponent(i[1].toString());
-                }
-            });
-            
-            return queries.to
-        }
+        setTimeout(() => {
+            createButton(document, 'script', 'facebook-jssdk')
+        }, 100);
     </script>
-</body>
+    </body>
 </html>
