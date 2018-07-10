@@ -1,9 +1,16 @@
+@font-face{ 
+	font-family: 'Kelmscot';
+	src: url('/fonts/kelmscot/KELMSCOT-webfont.eot');
+	src: url('/fonts/kelmscot/KELMSCOT-webfont.eot?iefix') format('eot'),
+	     url('/fonts/kelmscot/KELMSCOT-webfont.woff') format('woff'),
+	     url('/fonts/kelmscot/KELMSCOT-webfont.ttg') format('truetype'),
+	     url('/fonts/kelmscot/KELMSCOT-webfont.svg#webfont') format('svg');
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #fbddd0;
-  background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
-  background-size: 30px 30px;
+  margin: 5px;
+  padding: 5px;
+  background: #d6d6d6;
 }
 
 h1 {
@@ -14,16 +21,14 @@ h1 {
 
 #invitation {
   min-width: 300px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
   padding: 5%;
+  background-color: #fbddd0;
+  background-image: linear-gradient(90deg, transparent 50%, rgba(250, 233, 211) 50%);
+  background-size: 30px 30px;
 }
 
 #invitation > .frame {
   position: relative;
-  height: 100%;
-  width: 100%;
   border: 8px solid;
   border-image: url('/images/dot.svg') 33% round;
   border-image-outset: 0.5;
@@ -32,30 +37,72 @@ h1 {
 #invitation > .frame .frame-outer {
   border: solid 4px #C3792A;
   padding: 3px;
-  height: 100%;
 }
 
 #invitation > .frame .frame-inner {
   border: solid 2px #C3792A;
-  padding: 10px;
-  height: 100%;
+  padding: 5px;
 }
 
-#invitation > .frame .frame-top{
-  position: absolute;
-  top: 0;
+#invitation > .frame .frame-corner {
+  border: 10px solid;
+  border-image: url('/images/corner.svg') 33% round;
+  border-image-width: 7;
+}
+
+#invitation .container-fluid {
   width: 100%;
-  height: 100%;
 }
 
-#invitation > .frame .frame-bottom{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+#invitation .box {
+  border: 30px solid;
+  border-image: url('/images/box.svg') 33% round;
 }
 
-#invitation .we {
+#invitation .content-undangan {
+  padding-bottom: 20px;
+}
+#invitation .content-undangan .image{
   width: 80%;
-  max-width:300px;
+  max-width: 300px;
+}
+
+#invitation .content-we .image {
+  width: 80%;
+  max-width: 300px;
+}
+#invitation .content-to {
+  margin-bottom: 10px;
+  background: url(/images/box-to.svg) no-repeat;
+  background-size: 86%;
+  background-position: center;
+  object-fit: contain;
+  height: 60px;
+}
+#invitation .content-to .to {
+  padding-top: 22px;
+  font-size: 17px;
+  font-family: Kelmscot;
+  color: #dc5e65;
+}
+#invitation .content-data {
+  margin-bottom: 20px;
+}
+#invitation .box .content {
+  margin: -8px;
+  background: #fae9d3;
+  font-family: Kelmscot;
+  color: #dc5e65;
+}
+
+#invitation .doa {
+  text-align: center;
+  font-size: 20px;
+  color: #c47e3c;
+  font-family: Kelmscot;  
+}
+
+#photo {
+  background-color: #fbddd0;
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 15px, rgba(250, 233, 211) 15px, rgba(250, 233, 211) 30px);
 }
