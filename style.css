@@ -29,9 +29,20 @@ h1 {
   border-image-outset: 0.5;
 }
 
+#invitation > .frame .frame-outer {
+  border: solid 4px #C3792A;
+  padding: 3px;
+  height: 100%;
+}
+
+#invitation > .frame .frame-inner {
+  border: solid 2px #C3792A;
+  padding: 10px;
+  height: 100%;
+}
+
 #invitation > .frame .frame-top{
   position: absolute;
-  border: solid 4px #C3792A;
   top: 0;
   width: 100%;
   height: 100%;
@@ -42,9 +53,6 @@ h1 {
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow:inset 0px 0px 30px #c47e3c;
-  -moz-box-shadow:inset 0px 0px 30px #c47e3c;
-  box-shadow:inset 0px 0px 30px #c47e3c;
 }
 
 #invitation .we {
