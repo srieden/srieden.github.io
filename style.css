@@ -169,3 +169,8 @@ h1 {
   font-size: 20px;
   background: rgba(251, 221, 208, 0.93);
 }
+
+.navbar {
+  margin: -8px;
+  margin-bottom: 10px;
+}
