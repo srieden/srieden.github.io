@@ -25,7 +25,7 @@
                                             <img class="image" src="/images/we.png" alt="Sri and Deden">
                                         </div>
                                         <div class="col-xs-12 col-sm-6 text-center content-to">
-                                            <div class="to text-center">Septian Dwi Cahya</div>
+                                            <div class="to text-center">Tamu Undangan</div>
                                         </div>
                                         <div class="col-xs-12 col-sm-6 text-center content-data">
                                             <div class="box">
@@ -40,7 +40,7 @@
                                             <img class="image" src="/images/undangan.png" alt="Undangan">
                                         </div>
                                         <div class="col-xs-12 col-sm-6 text-center content-to" style="margin-top:30px">
-                                            <div class="to text-center">Septian Dwi Cahya</div>
+                                            <div class="to text-center">Tamu Undangan</div>
                                         </div>
                                     </div>
                                     <div class="row hidden-xs" style="margin-top:30px">                            
@@ -70,7 +70,7 @@
                         <div id="imagehere"></div>
                         <div class="photo-content"></div>
                         <div class="to">
-                            Septian Dwi Cahya
+                            Tamu Undangan
                         </div>
                     </div>
                 </div>
@@ -111,8 +111,10 @@
         function getName () {
             var queries = {};
             $.each(document.location.search.substr(1).split('&'),function(c,q){
-                var i = q.split('=');
-                queries[i[0].toString()] = decodeURIComponent(i[1].toString());
+                if (q) {
+                    var i = q.split('=');
+                    queries[i[0].toString()] = decodeURIComponent(i[1].toString());
+                }
             });
             
             return queries.to
