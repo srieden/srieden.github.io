@@ -65,7 +65,15 @@
         </div>
         <div class="back">
             <div id="photo">
-                aasdf
+                <div class="frame">
+                    <div class="frame-inner">
+                        <div id="imagehere"></div>
+                        <div class="photo-content"></div>
+                        <div class="to">
+                            Septian Dwi Cahya
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -73,11 +81,42 @@
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#card").flip().on('flip:done', function () {
-                var inHeight = $('#invitation').innerHeight()
-                $('#photo').height(inHeight)
+            let name = getName()
+            changeName(name)
+
+            $.getJSON('/data.json').then(function(response) {
+                if (response[name]) {
+                    setImage(name, response[name])
+                }
             })
+
+            
+            setTimeout(() => {
+                var inHeight = $('#invitation').height() - 30
+                $('#photo .frame-inner, #photo img').css({'height': inHeight})
+            }, 100);
+
+            $("#card").flip()
         })
+
+        function changeName (name) {
+            $('.to').html(name)
+        }
+
+        function setImage (name, src) {
+            let image = '<img src="' + src + '" alt="' + name + '">';
+            $('#imagehere').replaceWith(image)
+        }
+
+        function getName () {
+            var queries = {};
+            $.each(document.location.search.substr(1).split('&'),function(c,q){
+                var i = q.split('=');
+                queries[i[0].toString()] = decodeURIComponent(i[1].toString());
+            });
+            
+            return queries.to
+        }
     </script>
 </body>
 </html>
