@@ -74,13 +74,13 @@ h1 {
 #invitation .content-to {
   margin-bottom: 10px;
   background: url(/images/box-to.svg) no-repeat;
-  background-size: 86%;
+  background-size: 260px;
   background-position: center;
   object-fit: contain;
-  height: 60px;
+  height: 50px;
 }
 #invitation .content-to .to {
-  padding-top: 22px;
+  padding-top: 17px;
   font-size: 17px;
   font-family: Kelmscot;
   color: #dc5e65;
@@ -151,7 +151,7 @@ h1 {
   top: 0;
   width: 100%;
   height: 100%;
-  border: 10px solid;
+  border: 6px solid;
   border-image: url('/images/photo-corner.svg') 33% round;
   border-image-width: 7;
   z-index: 1;
