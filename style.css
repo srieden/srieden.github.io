@@ -138,12 +138,27 @@ h1 {
   object-fit: cover;
 }
 
+.img-comment {
+  height: 100px !important;
+  object-fit: cover;
+}
+
+.please {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  font-family: Kelmscot;
+  color: #dc5e65;
+  background: #fae9d3;
+}
+
 @media (min-width: 768px) {
-  #photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }    
+  .img-comment {
+    height: 200px !important;
+  }
+  .please {
+    font-size: 20px;
+  }
 }
 
 #photo > .frame .photo-content {
@@ -173,4 +188,30 @@ h1 {
 .navbar {
   margin: -8px;
   margin-bottom: 10px;
+}
+
+.navbar-default {
+  background-color: #fae9d3;
+  border-color: #fdddcf;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #dc5e65;
+}
+.btn-default {
+  color: #fae9d3;
+  background-color: #ea6b72;
+  border-color: #dc5e65;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #dc5e65;
+  background-color: #fbddd0;
+}
+
+hr{
+  background: #fbddd0;
+  margin: 0;
+  border-top: 10px solid;
+  border-image: url('/images/photo-dot.svg') 33% round;
 }

@@ -23,7 +23,6 @@
                 <a class="navbar-brand" href="/" style="padding:10px">
                     <img src="/images/srideden.svg" alt="Sri & Deden" width="180" style="max-width:160px">
                 </a>
-                <div class="visible-xs pull-right fb-share-button btn btn-default navbar-btn" data-href="/" data-size="large"></div>
                 <a href="/comment.html" class="visible-xs pull-right btn btn-default navbar-btn" style="margin-right:10px"><i class="material-icons">comment</i></a>
                 <a href="/location.html" class="visible-xs pull-right btn btn-default navbar-btn" style="margin-right:10px"><i class="material-icons">pin_drop</i></a>
             </div>
@@ -32,7 +31,6 @@
                     <li><a href="/location.html"><i class="material-icons">pin_drop</i> Lihat Lokasi</a></li>
                     <li><a href="/comment.html"><i class="material-icons">comment</i> Beri Ucapan</a></li>
                 </ul>
-                <div class="hidden-xs pull-right fb-share-button btn btn-default navbar-btn" data-href="/" data-size="large"></div>
             </div>
         </div>
     </nav>
@@ -104,23 +102,10 @@
             </div>
         </div>
     </div>
-    <div id="fb-root"></div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="/app.js"></script>
-    <script>
-        function createButton (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        };
-
-        setTimeout(() => {
-            createButton(document, 'script', 'facebook-jssdk')
-        }, 100);
     </script>
     </body>
 </html>
