@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  $('.fb-share-button').attr('data-href', location.href)
-
   let name = getName()
   changeName(name)
 
