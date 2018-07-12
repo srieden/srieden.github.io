@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="shortcut icon" href="/images/logo.png" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/material-icon.css">
-        <link rel="stylesheet" href="/style.css">
-        <title>Undangan Pernikahan Sri Haryati dan Deden Maulana</title>
-        <meta name="description" content="Resepsi dan Akad Nikah Pernikahan Sri Haryati dan Deden Maulana yang akan di selenggarakan pada tanggal 08 Sepetember 2018, dan bertempat di telukjambe, karawang">
-        <meta property="og:url"           content="/index.html" />
-        <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="Pernikahan Sri & Deden" />
-        <meta property="og:description"   content="Resepsi dan Akad Nikah Pernikahan Sri Haryati dan Deden Maulana yang akan di selenggarakan pada tanggal 08 Sepetember 2018, dan bertempat di telukjambe, karawang" />
-        <meta property="og:image"         content="/images/logo.png" />
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="/material-icon.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Undangan Pernikahan Sri Haryati dan Deden Maulana</title>
+    <meta name="description" content="Resepsi dan Akad Nikah Pernikahan Sri Haryati dan Deden Maulana yang akan di selenggarakan pada tanggal 08 Sepetember 2018, dan bertempat di telukjambe, karawang">
+    <meta property="og:url"           content="/index.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Pernikahan Sri & Deden" />
+    <meta property="og:description"   content="Resepsi dan Akad Nikah Pernikahan Sri Haryati dan Deden Maulana yang akan di selenggarakan pada tanggal 08 Sepetember 2018, dan bertempat di telukjambe, karawang" />
+    <meta property="og:image"         content="/images/logo.png" />
+</head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -28,21 +30,57 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/location.html"><i class="material-icons">pin_drop</i> Lihat Lokasi</a></li>
-                    <li><a href="/comment.html"><i class="material-icons">comment</i> Beri Ucapan</a></li>
+                    <li><a href="/location.html"><i class="material-icons">pin_drop</i> Lokasi</a></li>
+                    <li><a href="/comment.html"><i class="material-icons">comment</i> Komentar</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <h1>Page Under Construction</h1>
-      </div>
-      <div class="col-xs-12 text-center">
-        <img src="/images/logo.png" alt="Logo" width="100%" style="max-width:300px">
-      </div>
+    <div class="slider">
+        <div class="slider-content">
+            <img src="/images/Slide1.png" alt="1">
+        </div>
+        <div class="slider-content">
+            <img src="/images/Slide2.png" alt="2">
+        </div>
+        <div class="slider-content">
+            <img src="/images/Slide3.png" alt="3">
+        </div>
     </div>
-  </div>
+
+    <div class="quote">
+            Niti wanci takdir Gusti, cunduk wuku panjurung nu Maha Agung, pasini mugi ngajadi, subaya geusan laksana,<br>seja mungkas mangsa lalagasan, dilajeng niat suci ngawujudkeun laki rabi.
+    </div>
+
+    <div class="logo">
+        <img src="/images/we.png" alt="We">
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                infinite: true,
+                responsive: [
+                    {
+                        breakpoint: 2000,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    }, {
+                        breakpoint: 800,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 </html>
