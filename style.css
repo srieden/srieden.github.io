@@ -233,7 +233,7 @@ hr{
   padding: 5px 20px;
   color: white;
   text-align: center;
-  font-size: 17px;
+  font-size: 14.5px;
   font-family: Kelmscot;
   border-top: 13px solid;
   border-bottom: 13px solid;
@@ -256,6 +256,7 @@ hr{
 }
 
 .info {
+  margin: 0 -15px;
   padding: 30px 0;
   text-align: center;
   background-color: #fbddd0;
@@ -264,14 +265,17 @@ hr{
 }
 .info .box {
   display: inline-block;
-  padding: 0 20px;
-  background: #fae9d3;
   border: 30px solid;
   border-image: url('/images/box.svg') 33% round;
 }
 
-.info .box img {
+.info .content {
+  padding: 0 20px;
+  background: #fae9d3;
+}
+
+.info img {
   margin: -10px;
-  width: 100%;
+  width: 80%;
   max-width: 300px;
 }
