@@ -241,23 +241,7 @@ hr{
   border-image: url('/images/quote-dot.svg') 33% round;
 }
 
-@media (min-width: 768px) {
-  .img-comment {
-    height: 200px !important;
-  }
-  .please {
-    font-size: 20px;
-  }
-  .quote {
-    font-size: 20px;
-  }
-  .slider-content {
-    padding: 10px;
-  }  
-}
-
 .info {
-  margin: 0 -15px;
   padding: 30px 0;
   text-align: center;
   background-color: #fbddd0;
@@ -265,6 +249,9 @@ hr{
   background-size: 30px 30px;
 }
 .info .box {
+  font-weight: bold;
+  color: #ea6b71;
+  margin: 15px 0;
   display: inline-block;
   border: 30px solid;
   border-image: url('/images/box.svg') 33% round;
@@ -279,4 +266,28 @@ hr{
   margin: -10px;
   width: 80%;
   max-width: 300px;
+}
+
+.img3d {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.img3d img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .img-comment {
+    height: 200px !important;
+  }
+  .please {
+    font-size: 20px;
+  }
+  .quote {
+    font-size: 20px;
+  }
+  .slider-content {
+    padding: 10px;
+  } 
 }
