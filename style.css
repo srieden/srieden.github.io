@@ -291,3 +291,12 @@ hr{
     padding: 10px;
   } 
 }
+
+.box {
+  font-family: Kelmscot;
+}
+
+.box a {
+  color: #da565e;
+  text-decoration: underline;
+}
