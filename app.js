@@ -1,25 +1,35 @@
 $(document).ready(function () {
   let name = getName()
+  var  source = []
+  
   changeName(name)
 
   $.getJSON('/data.json').then(function(response) {
-      var image = getImage()
+    source = Object.keys(response)
 
-      if (response[name]) {
-          image = response[name]
-      }
-      
-      if (image) {
-          setImage(name, image)
-      }
+    var image = getImage()
+    
+
+    if (response[name]) {
+      image = response[name]
+    }
+    
+    if (image) {
+      setImage(name, image)
+    }
+
+    if (!name) {
+      $('input').autocomplete({source})
+    }
   })
 
-  
-  setTimeout(() => {
+  if (name) {
+    setTimeout(() => {
       setHeight()
-  }, 100);
-
-  $("#card").flip().on('flip:done', setHeight)
+    }, 100);
+  
+    $("#card").flip().on('flip:done', setHeight)
+  }
 })
 
 function setHeight () {
@@ -39,8 +49,8 @@ function setImage (name, src) {
 
 function getName () {
   let queries = getQueries()
-  
-  return queries.to
+  let name = queries.to
+  if (name) return name.replace('+', ' ')
 }
 
 function getImage () {
