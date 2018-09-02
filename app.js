@@ -50,7 +50,9 @@ function setImage (name, src) {
 function getName () {
   let queries = getQueries()
   let name = queries.to
-  return name.split('+').join(' ')
+  if (name) {
+    return name.split('+').join(' ')
+  }
 }
 
 function getImage () {
